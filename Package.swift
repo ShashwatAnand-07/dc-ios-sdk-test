@@ -1,6 +1,10 @@
 // swift-tools-version: 5.8
 import PackageDescription
 
+
+let url = Bundle.main.object(forInfoDictionaryKey: "url") as? String
+
+
 let package = Package(
     name: "RiskManager",
     platforms: [
@@ -14,7 +18,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "RiskManager",
-            url: "https://github.com/ShashwatAnand-07/dc-ios-sdk-test/releases/download/v1.0.0/RiskManager-20260908173256.xcframework.zip",
+            url: url,
             checksum: "454f03c277b31e3fc896ab979d6390fa3bb3732b9f265634e6f5bbb28fa871d5"
         ),
     ]
